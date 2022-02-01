@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import Body from './components/Body';
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
         >
           Learn React
         </a>
+        <Body />
       </body>
       <footer>
         <Footer />
