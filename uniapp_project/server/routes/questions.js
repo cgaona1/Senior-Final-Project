@@ -1,10 +1,9 @@
 import express from 'express';
+import { getQuestions } from '../controllers/questions.js';
 
 const router = express.Router();
 
 router.route('/')
-    .get(function(req,res){
-        res.send('Get route works!');
-    });
+    .get(getQuestions);
 
 export default router;
