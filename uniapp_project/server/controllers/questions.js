@@ -1,5 +1,7 @@
 import Question from "../models/questionMessage.js";
 
+//HTTP status codes https://www.restapitutorial.com/httpstatuscodes.html
+
 export const getQuestions = async function (req, res) {
     try{
         const questions = await Question.find();
