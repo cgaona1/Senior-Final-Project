@@ -1,6 +1,8 @@
 import React from 'react';
 import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
 
+import Questions from './components/Questions/questions.js';
+import Form from './components/Form/form.js'
 import UniAppImage from './images/UniAppImage.jpeg';
 
 const App = () => {
