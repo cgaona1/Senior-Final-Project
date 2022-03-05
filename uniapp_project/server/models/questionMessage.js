@@ -17,4 +17,6 @@ const questionSchema = mongoose.Schema({
 });
 
 //Model for question
-const QuestionMessage = mongoose.model('QuestionMessage', questionSchema);
+const Question = mongoose.model('Question', questionSchema);
+
+export default Question;
