@@ -7,11 +7,11 @@ import questionRoutes from './routes/questions.js';
 
 const app = express();
 
-app.use('/questions', questionRoutes);
-
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
+
+app.use('/questions', questionRoutes);
 
 const CONNECTION_URL = 'mongodb+srv://cgaona:cgaona123@cluster0.upe4k.mongodb.net/UniApp?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 3000;
