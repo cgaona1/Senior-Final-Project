@@ -6,13 +6,13 @@ const questionSchema = mongoose.Schema({
     questionMessage: String,
     questionCreator: String,
     questionTags: [String],
-    upvoteCount:{
+    upVoteCount:{
         type: Number,
-        default: 0
+        default: 0,
     },
-    downvoteCount:{
+    createdAt:{
         type: Date,
-        default: new Date()
+        default: new Date(),
     }
 });
 
