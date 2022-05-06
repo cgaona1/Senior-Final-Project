@@ -5,7 +5,7 @@ import moment from 'moment';
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from "@material-ui/core/";
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
-const Question = ({ question }) => {
+const Question = ({ question, setCurrentId }) => {
     const classes = useStyles();
 
     return (
@@ -16,8 +16,8 @@ const Question = ({ question }) => {
                 <Typography variant="body2">{moment(question.createdAt).fromNow()}</Typography>
             </div>
             <div className={classes.overlay2}>
-                <Button style={{color: 'white'}} size="small" onClick={() => {}}>
-                    <MoreHorizIcon fontSize="default"/>
+                <Button style={{color: 'white'}} size="small" onClick={() => setCurrentId(question._id)}>
+                    <MoreHorizIcon fontSize="medium"/>
                 </Button>
             </div>
             <div className={classes.details}>
