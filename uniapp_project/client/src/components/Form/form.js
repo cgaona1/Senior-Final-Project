@@ -22,7 +22,12 @@ const Form = () => {
         dispatch(createQuestion(questionData));
     };
     const clear = () => {
-
+        setQuestionData({
+            questionCreator: '',
+            questionTitle: '',
+            questionMessage: '',
+            questionTags: '',
+        });
     };
 
     return (
