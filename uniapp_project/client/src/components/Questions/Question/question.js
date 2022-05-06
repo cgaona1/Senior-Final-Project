@@ -1,12 +1,15 @@
 import React from "react";
 import useStyles from "./styles.js";
 import moment from 'moment';
+import { useDispatch } from "react-redux";
+import { deleteQuestion } from "../../../actions/questions.js";
 
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from "@material-ui/core/";
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
 const Question = ({ question, setCurrentId }) => {
     const classes = useStyles();
+    const dispatch = useDispatch();
 
     return (
         <Card className={classes.card}>
@@ -32,7 +35,7 @@ const Question = ({ question, setCurrentId }) => {
                     Up Vote
                     {question.upVoteCount}
                 </Button>
-                <Button size="small" color="primary" onClick={() => {}}>
+                <Button size="small" color="primary" onClick={() => dispatch(deleteQuestion(question._id))}>
                     Delete
                 </Button>
             </CardActions>

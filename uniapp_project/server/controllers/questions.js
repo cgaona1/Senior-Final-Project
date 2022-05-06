@@ -29,7 +29,7 @@ export const createQuestion = async function (req, res) {
 }
 
 export const updateQuestion = async function (req, res) {
-    const { id: _id } = req.params;
+    const { _id } = req.params;
     const question = req.body;
 
     if(!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send('Question Not Found');
@@ -37,4 +37,14 @@ export const updateQuestion = async function (req, res) {
     const updatedQuestion = await Question.findByIdAndUpdate(_id, question, { new: true });
 
     res.status(201).json(updatedQuestion);
+}
+
+export const deleteQuestion = async function (req, res) {
+    const { _id } = req.params;
+
+    if (!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send('Question Not Found');
+    
+    await Question.findByIdAndRemove(_id);
+    
+    res.status(201).json(getQuestions);
 }

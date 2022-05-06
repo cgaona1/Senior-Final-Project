@@ -1,5 +1,5 @@
 import express from 'express';
-import { getQuestions, createQuestion, updateQuestion } from '../controllers/questions.js';
+import { getQuestions, createQuestion, updateQuestion, deleteQuestion } from '../controllers/questions.js';
 
 const router = express.Router();
 
@@ -8,6 +8,7 @@ router.route('/')
     .post(createQuestion);
 
 router.route('/:id')
-    .patch(updateQuestion);
+    .patch(updateQuestion)
+    .delete(deleteQuestion);
 
 export default router;
