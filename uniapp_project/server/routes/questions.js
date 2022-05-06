@@ -7,4 +7,7 @@ router.route('/')
     .get(getQuestions)
     .post(createQuestion);
 
+router.route('/id')
+    .patch(updateQuestion);
+
 export default router;

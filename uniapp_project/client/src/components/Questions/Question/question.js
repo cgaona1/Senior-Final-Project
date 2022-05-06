@@ -3,6 +3,7 @@ import useStyles from "./styles.js";
 import moment from 'moment';
 
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from "@material-ui/core/";
+import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
 const Question = ({ question }) => {
     const classes = useStyles();
@@ -16,6 +17,7 @@ const Question = ({ question }) => {
             </div>
             <div className={classes.overlay2}>
                 <Button style={{color: 'white'}} size="small" onClick={() => {}}>
+                    <MoreHorizIcon fontSize="default"/>
                 </Button>
             </div>
             <div className={classes.details}>
